@@ -28,7 +28,7 @@ body{
     flex-wrap: wrap;
     position: relative;
     flex-direction: row, column;
-    width: 1000px;
+    width: 100%;
     height: 100%;
     justify-content: center;
     margin: 20px;
@@ -44,6 +44,7 @@ body{
     height: 200%;
 }
 .img{
-    width: 20%;
-    height: 30%;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
 }

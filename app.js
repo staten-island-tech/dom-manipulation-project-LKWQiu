@@ -35,7 +35,7 @@ function byevalue(){
 
 function printvalues(x){
     const HTMLout = `<div class="ncard" id="ncard">
-        <img src="${x.Image}" alt="Error">
+        <img src="${x.Image}" alt="Error" class="img">
         <p>Name:${x.Name}</p>
         <p>Class:${x.Class}</p>
         <p>Range:${x.Range}</p>
