@@ -2,31 +2,35 @@
 const DOMselectors = {
     form1 : document.getElementById("form1"),
     Name : document.getElementById("Name"),
-    Date : document.getElementById("Date"),
+    Range : document.getElementById("Range"),
+    HP : document.getElementById("HP"),
     Class : document.getElementById("Class"),
     Image: document.getElementById("Image"),
     card1: document.querySelector(".card"),
 };
 function callvalue(){
     const callName = DOMselectors.Name.value;
-    const callDate = DOMselectors.Date.value;
+    const callRange = DOMselectors.Range.value;
     const callClass = DOMselectors.Class.value;
     const callImage = DOMselectors.Image.value;
+    const callHP = DOMselectors.HP.value;
 
     return{
         Name: callName,
-        Date: callDate,
+        Range: callRange,
         Class: callClass,
         Image: callImage,
+        HP: callHP,
 
     };
 }
 
 function byevalue(){
     DOMselectors.Name.value= "";
-    DOMselectors.Date.value= "";
+    DOMselectors.Range.value= "";
     DOMselectors.Class.value= "";
     DOMselectors.Image.value= "";
+    DOMselectors.HP.value= "";
 }
 
 function printvalues(x){
@@ -34,7 +38,8 @@ function printvalues(x){
         <img src="${x.Image}" alt="Error">
         <p>Name:${x.Name}</p>
         <p>Class:${x.Class}</p>
-        <p>Date:${x.Date}</p>
+        <p>Range:${x.Range}</p>
+        <p>HP:${x.HP}</p>
         <button class="removebutton">Remove</button>
         </div>`;
     DOMselectors.card1.insertAdjacentHTML("beforeend", HTMLout);
@@ -49,7 +54,7 @@ DOMselectors.form1.addEventListener("submit", function(event){
 
 function RemoveCard(event){
     if(event.target.classList.contains("removebutton")){
-        event.target.closest(".card").remove()
+        event.target.closest(".ncard").remove()
     }
 }
 DOMselectors.card1.addEventListener("click", RemoveCard);
