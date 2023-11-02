@@ -45,6 +45,6 @@ body{
 }
 .img{
     object-position: center;
+    
     width: 50%;
-    overflow: hidden;
 }
